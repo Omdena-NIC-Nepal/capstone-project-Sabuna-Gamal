@@ -19,6 +19,7 @@ def prepare_features(df):
     # Define the feature columns
     feature_cols = [
         'year',
+        'avg_mean_temp',
         'avg_min_temp', 
         'avg_max_temp', 
         'relative_humidity', 
