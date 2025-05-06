@@ -5,8 +5,8 @@ import numpy as np
 import streamlit as st
 
 @st.cache_data
-def load_data(file_path = 'D:/Assignment/Capstone Project/capstone-project-Sabuna-Gamal/Data/combined_data_climate.csv'):
-    
+def load_data(file_path = 'D:/Assignment/Capstone Project/capstone-project-Sabuna-Gamal/Data/combined_climate_data.csv'):
+    #def load_data(file_path = 'D:/Assignment/Capstone Project/capstone-project-Sabuna-Gamal/Data/combined_data_climate.csv'):
     # Load the CSV file
     df = pd.read_csv(file_path)
 

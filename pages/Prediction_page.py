@@ -4,7 +4,7 @@ import sys
 
 sys.path.append("D:/Assignment/Capstone Project/capstone-project-Sabuna-Gamal")
 
-from models import load_model
+from model import load_model
 from prediction import make_prediction, get_historical_context, get_historical_average
 from visualization import plot_prediction_context
 
