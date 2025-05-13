@@ -1,12 +1,16 @@
 
 import numpy as np
 import pickle
+import os
 from sklearn.model_selection import train_test_split, cross_val_score
 from sklearn.linear_model import LinearRegression, Ridge, Lasso
 from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor, RandomForestClassifier, GradientBoostingClassifier
 from sklearn.svm import SVC
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score, accuracy_score, f1_score
 from sklearn.preprocessing import StandardScaler
+
+# Define the model storage directory
+MODEL_DIR = "ML_Models
 
 def split_data(X, y, test_size=0.2, random_state=42):
     """
@@ -95,21 +99,29 @@ def cross_validate_model(model, X, y, task="regression", cv=5):
         scores = cross_val_score(model, X, y, cv=cv, scoring='accuracy')
     return scores.mean()
 
+
 def save_model(model, file_name='climate_model.pkl'):
     """
-    Save the trained model to disk.
+    Save the trained model to the ML_Models directory.
     """
-    with open(file_name, 'wb') as file:
+    os.makedirs(MODEL_DIR, exist_ok=True)
+    full_path = os.path.join(MODEL_DIR, file_name)
+    
+    with open(full_path, 'wb') as file:
         pickle.dump(model, file)
+    print(f"[Info] Model saved to: {full_path}")
 
 def load_model(file_name='climate_model.pkl'):
     """
-    Load a previously saved models from disk.
+    Load a previously saved model from the ML_Models directory.
     """
+    full_path = os.path.join(MODEL_DIR, file_name)
+    
     try:
-        with open(file_name, 'rb') as file:
+        with open(full_path, 'rb') as file:
             model = pickle.load(file)
+        print(f"[Info] Model loaded from: {full_path}")
         return model
     except FileNotFoundError:
-        print(f"[Warning] Model file '{file_name}' not found.")
+        print(f"[Warning] Model file '{full_path}' not found.")
         return None
