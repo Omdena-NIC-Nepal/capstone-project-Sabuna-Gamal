@@ -62,9 +62,8 @@ Start the Streamlit application:
 streamlit run app.py
 ```
 ### Streamlit
+https://omdena-nic-nepal-capstone-project-sabuna-gamal-app-dwetrk.streamlit.app/
 
- Local URL: http://localhost:8501
-  Network URL: http://192.168.1.45:8501
 
 
 ### Navigation Guide

@@ -2,7 +2,7 @@ import streamlit as st
 import sys
 import os 
 
-sys.path.append("D:/Assignment/Capstone Project/capstone-project-Sabuna-Gamal")
+#sys.path.append("D:/Assignment/Capstone Project/capstone-project-Sabuna-Gamal")
 from  data_utils import  prepare_features
 from model import split_data , train_model, evaluate_model, save_model, cross_validate_model
 from visualization import plot_actual_vs_predicted
