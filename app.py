@@ -3,7 +3,8 @@ from data_utils import load_data
 import sys
 
 sys.path.append("D:/Assignment/Capstone Project/capstone-project-Sabuna-Gamal/pages")
-from pages import Data_Exploration, Model_Training, Prediction_page, Feature_Engineering
+from pages import Data_Exploration, Model_Training, Prediction_page
+from pages.Feature_Engineering import Feature_Engineering 
 
 
 # Set the page configuration
@@ -28,9 +29,9 @@ page = st.sidebar.radio("Go to", [" Data_Exploration", "Model_Training", "Predic
 # Display the selected page
 if page == " Data_Exploration":
     Data_Exploration.show(df)
+elif page == "Feature_Engineering":
+    Feature_Engineering.show(df)
 elif page == "Model_Training":
     Model_Training.show(df)
-elif page == "Prediction_page":
+else: #Prediction
     Prediction_page.show(df)
-else: # Feature_Engineering
-    Feature_Engineering.show(df)

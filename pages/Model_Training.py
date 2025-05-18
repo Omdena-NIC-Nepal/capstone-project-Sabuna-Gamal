@@ -1,5 +1,6 @@
 import streamlit as st
 import sys
+import os 
 
 sys.path.append("D:/Assignment/Capstone Project/capstone-project-Sabuna-Gamal")
 from  data_utils import  prepare_features
@@ -70,9 +71,15 @@ def show(df):
                 cv_score = cross_validate_model(model, X, y, task=task)
                 st.write(f"Cross-Validation Score: {cv_score:.3f}")
 
-            # Save model
-            save_model(model, file_name=f"{model_type.replace(' ', '_').lower()}_model.pkl")
-            st.success("✅ Model trained and saved successfully!")
+                # Define the model storage directory 
+                MODEL_DIR = "ML_Models"
+
+                # Save model to ML_Models directory with standardized file name
+                model_file_name = f"{model_type.replace(' ', '_').lower()}_model.pkl"
+                save_model(model, file_name=model_file_name)
+                st.success(f"✅ Model trained and saved successfully in '{MODEL_DIR}/{model_file_name}'")
+
+            
 
             # Session state store
             st.session_state['model'] = model

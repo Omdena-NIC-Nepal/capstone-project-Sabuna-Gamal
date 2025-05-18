@@ -10,7 +10,7 @@ from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score, a
 from sklearn.preprocessing import StandardScaler
 
 # Define the model storage directory
-MODEL_DIR = "ML_Models
+MODEL_DIR = "ML_Models"
 
 def split_data(X, y, test_size=0.2, random_state=42):
     """
