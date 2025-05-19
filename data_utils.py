@@ -3,11 +3,13 @@
 import pandas as pd
 import numpy as np
 import streamlit as st
+import os
 
 @st.cache_data
-def load_data(file_path = 'D:/Assignment/Capstone Project/capstone-project-Sabuna-Gamal/Data/combined_climate_data.csv'):
-    #def load_data(file_path = 'D:/Assignment/Capstone Project/capstone-project-Sabuna-Gamal/Data/combined_data_climate.csv'):
-    # Load the CSV file
+def load_data(file_path = 'data/combined_climate_data.csv'):
+    if not os.path.exists(file_path):
+        st.error(f"❌ File not found: {file_path}")
+        st.stop()
     df = pd.read_csv(file_path)
 
     return df

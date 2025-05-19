@@ -2,7 +2,7 @@ import streamlit as st
 import numpy as np
 import sys
 
-sys.path.append("D:/Assignment/Capstone Project/capstone-project-Sabuna-Gamal")
+#sys.path.append("D:/Assignment/Capstone Project/capstone-project-Sabuna-Gamal")
 
 from model import load_model
 from prediction import make_prediction, get_historical_context, get_historical_average

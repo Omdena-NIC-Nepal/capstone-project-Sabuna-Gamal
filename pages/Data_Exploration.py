@@ -2,8 +2,10 @@
 import streamlit as st
 import sys
 
-sys.path.append("D:/Assignment/Capstone Project/capstone-project-Sabuna-Gamal")
+#sys.path.append("D:/Assignment/Capstone Project/capstone-project-Sabuna-Gamal")
+
 from visualization import plot_temperature_trends, plot_rainfall_trends, plot_prediction_context, plot_actual_vs_predicted, plot_agriculture_trends, plot_correlation_heatmap, plot_fertilizer_use, plot_humidity_trends, plot_population_density
+
 
 def show(df):
     st.title("🌍 Climate and Agriculture Data Exploration")

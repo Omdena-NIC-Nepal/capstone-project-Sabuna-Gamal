@@ -2,7 +2,7 @@ import streamlit as st
 from data_utils import load_data
 import sys
 
-sys.path.append("D:/Assignment/Capstone Project/capstone-project-Sabuna-Gamal/pages")
+#sys.path.append("D:/Assignment/Capstone Project/capstone-project-Sabuna-Gamal/pages")
 from pages import Data_Exploration, Model_Training, Prediction_page
 from pages.Feature_Engineering import Feature_Engineering 
 
@@ -23,7 +23,7 @@ df = load_data()
 
 # Give the sidebar for the app navigation
 st.sidebar.title("Navigation")
-page = st.sidebar.radio("Go to", [" Data_Exploration", "Model_Training", "Prediction_page", "Feature_Engineering"])
+page = st.sidebar.radio("Go to", [" Data_Exploration", "Feature_Engineering", "Model_Training", "Prediction_page"])
 
 
 # Display the selected page
@@ -35,3 +35,4 @@ elif page == "Model_Training":
     Model_Training.show(df)
 else: #Prediction
     Prediction_page.show(df)
+    

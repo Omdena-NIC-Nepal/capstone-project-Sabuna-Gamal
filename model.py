@@ -7,7 +7,6 @@ from sklearn.linear_model import LinearRegression, Ridge, Lasso
 from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor, RandomForestClassifier, GradientBoostingClassifier
 from sklearn.svm import SVC
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score, accuracy_score, f1_score
-from sklearn.preprocessing import StandardScaler
 
 # Define the model storage directory
 MODEL_DIR = "ML_Models"
