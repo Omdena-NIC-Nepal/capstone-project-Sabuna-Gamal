@@ -10,68 +10,51 @@
 - Feature Engineering
 - Machine Learning Model Training and Evaluation
 - Prediction
-- Natural Language Processing (NLP) capabilities
 
 **Target Variable**: Average Maximum Temperature (`avg_max_temp`)
 
-### Core Features
+##Core Features
 - **Interactive Data Exploration**: Visualize trends, distributions, and correlations
 - **Multiple ML Models**: Random Forest, Gradient Boosting, Linear Regression, Ridge Regression
 - **Model Evaluation**: Comprehensive performance metrics and visualizations
 - **Feature Engineering**: Create and select features for modeling
 - **Prediction**: Make new predictions with trained models
-- **NLP Integration**: Analyze climate-related text using spaCy
 
-
-
-## Installation
-
-### Prerequisites
-- Python 3.8+
-
-### Setup Instructions
-1. Clone the repository:
+## Setup Instructions
+Clone the repository:
    ```cmd
    https://github.com/Omdena-NIC-Nepal/capstone-project-Sabuna-Gamal.git
    cd capstone-project-Sabuna-Gamal
    ```
 
-2. Create and activate a virtual environment (recommended):
+Create and activate a virtual environment (recommended):
    ```cmd
    python -m venv venv
    venv\Scripts\activate
    ```
 
-3. Install dependencies:
+Install dependencies:
    ```cmd
    pip install -r requirements.txt
    ```
 
-4. Download the spaCy language model:
-   ```cmd
-   python -m spacy download en_core_web_sm
-   ```
 
-5. Place your `combined_climate_data.csv` file in the directory: `../data'
 
-## Usage
+ Place your `combined_climate_data.csv` file in the directory: `../data'
 
-### Running the Application
+## Running the Application
 Start the Streamlit application:
 ```cmd
 streamlit run app.py
 ```
-### Streamlit
+## Streamlit
 https://omdena-nic-nepal-capstone-project-sabuna-gamal-app-dwetrk.streamlit.app/
 
 
-
-### Navigation Guide
-1. **Home**: Project introduction and NLP demo
-2. **EDA**: Explore and visualize the data
+## Navigation Guide
+1. **Data Exploration**: Explore and visualize the data
 3. **Feature Engineering**: Create and select features
 4. **Model Training**: Train machine learning models
-5. **Model Evaluation**: Compare model performance
 6. **Prediction**: Make new predictions
 
 ## File Structure
@@ -95,7 +78,6 @@ capstone-project-Sabuna-Gamal
 ├── prediction.py         # prediction
 
 ├── pages/
-│   ├── Home.py       # Project introduction
 │   ├── Data_Exploration.py        # Exploratory Data Analysis
 │   ├── Model_Training.py  # Model training page
 │   ├── Prediction_page.py      # Prediction interface
@@ -105,6 +87,3 @@ capstone-project-Sabuna-Gamal
 ├── README.txt        # Project instruction
 └── Documentation.md        # Documentation of the project with installation and process
 ```
-
-
----
