@@ -79,7 +79,7 @@ capstone-project-Sabuna-Gamal
 
 ├── pages/
 │   ├── Data_Exploration.py        # Exploratory Data Analysis
-│   ├── Model_Training.py  # Model training page
+│   ├── Model_Training.py  # Model training  and evaluation page
 │   ├── Prediction_page.py      # Prediction interface
 │   └── Feature_Engineering.py # Feature engineering
 ├── requirements.txt      # Dependencies
